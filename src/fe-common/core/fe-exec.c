@@ -614,8 +614,10 @@ static void sig_exec_input(PROCESS_REC *rec, const char *text)
 		str = g_strconcat(rec->target_nick ? "-nick " :
 				  rec->target_channel ? "-channel " : "",
 				  rec->target, " ", *text == '\0' ? " " : text, NULL);
+		server_ref(server);
 		signal_emit(rec->notice ? "command notice" : "command msg",
 			    3, str, server, item);
+		server_unref(server);
                 g_free(str);
 	} else if (rec->target_item != NULL) {
 		printtext(NULL, rec->target_item->visible_name,

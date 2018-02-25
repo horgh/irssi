@@ -76,4 +76,5 @@ SERVER_REC *cmd_options_get_server(const char *cmd,
 				   GHashTable *optlist,
 				   SERVER_REC *defserver);
 
+gboolean server_disconnect_lost_connections(gpointer user_data);
 #endif

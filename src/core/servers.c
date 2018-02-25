@@ -724,6 +724,23 @@ static void sig_chat_protocol_deinit(CHAT_PROTOCOL_REC *proto)
         disconnect_servers(lookup_servers, proto->id);
 }
 
+gboolean server_disconnect_lost_connections(gpointer user_data)
+{
+	GSList *ele;
+
+	(void) user_data;
+
+	for (ele = servers; ele != NULL; ele = ele->next) {
+		SERVER_REC *const server = ele->data;
+
+		if (server->connection_lost) {
+			server_disconnect(server);
+		}
+	}
+
+	return FALSE;
+}
+
 void servers_init(void)
 {
 	settings_add_bool("server", "resolve_prefer_ipv6", FALSE);

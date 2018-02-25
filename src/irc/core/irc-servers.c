@@ -529,6 +529,9 @@ void irc_server_send_data(IRC_SERVER_REC *server, const char *data, int len)
 	if (net_sendbuffer_send(server->handle, data, len) == -1) {
 		/* something bad happened */
 		server->connection_lost = TRUE;
+		/* The connection is dead, but until we call server_disconnect() it will
+		 * appear to be connected. Arrange for that to happen soon. */
+		g_timeout_add(1, server_disconnect_lost_connections, NULL);
 		return;
 	}
 

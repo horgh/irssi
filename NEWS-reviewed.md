@@ -1,0 +1,90 @@
+# irssi 1.5.0-beta1 — change review tracker
+
+One checkbox per NEWS entry in the `v1.5.0-beta1` section (79 total), in NEWS order.
+Each review is in `reviewed/<label>.md`. Consolidated findings: `reviewed/SUMMARY.md`. Guidance: `reviewer.md`.
+
+- Ref `#NNNN` = irssi GitHub PR · `an#NN` = fork PR · bare hash = direct-to-master commit.
+- The resolved master commit is in parentheses; reviewed via `git diff <commit>^1 <commit>`.
+- Verdict tag: `[SAFE]` · `[MINOR]` · `[NEEDS_ATTENTION]` · `[BLOCKER]`.
+
+**Progress: 79 / 79 reviewed** — 0 BLOCKER · 3 NEEDS_ATTENTION · 7 MINOR · 69 SAFE.
+
+- [x] **01.** `[SAFE]` `an#38, 9f9d49a2` (9f9d49a2) — Document the Perl version() and parse_special() functions and the $abiversion special variable. T... → `reviewed/an38.md`
+- [x] **02.** `[NEEDS_ATTENTION]` `an#42, d9b181e4` (d9b181e4) — Autoload the IRC protocol module and load its config when the chat protocol is created → `reviewed/an42.md`
+- [x] **03.** `[SAFE]` `an#64, 58efc637` (58efc637) — Remove the autotools build system in favour of meson → `reviewed/an64.md`
+- [x] **04.** `[MINOR]` `an#69, 3a5f93bb` (3a5f93bb) — Remove the enable-true-color compile-time switch and always enable 24-bit true color → `reviewed/an69.md`
+- [x] **05.** `[SAFE]` `an#73, 4115e474` (4115e474) — Remove deprecated compile-time build options such as PERL_STATIC_LIBS, HAVE_SOCKS and USE_GREGEX → `reviewed/an73.md`
+- [x] **06.** `[SAFE]` `an#74, 4bf12908` (4bf12908) — Add some missing files to make-dist → `reviewed/an74.md`
+- [x] **07.** `[SAFE]` `an#75, 4986a4f9` (4986a4f9) — Simplify the termux GitHub Actions workflow → `reviewed/an75.md`
+- [x] **08.** `[SAFE]` `an#80, ed4ec313` (ed4ec313) — Abort the meson build (and bump the required meson version) when run in an autotools-configured tree → `reviewed/an80.md`
+- [x] **09.** `[SAFE]` `an#79, ae5a9283` (ae5a9283) — Fix bound IRC queries not being restored on reconnect → `reviewed/an79.md`
+- [x] **10.** `[MINOR]` `an#81, e300fee9` (e300fee9) — Add a new PUBNOTICES message level to separate public channel notices from private notices → `reviewed/an81.md`
+- [x] **11.** `[SAFE]` `9f71a391` (9f71a391) — Add an OBS workflow trigger → `reviewed/commit9f71a391.md`
+- [x] **12.** `[SAFE]` `an#87, 7285da27` (7285da27) — Fix /names sending a raw server event by binding it first → `reviewed/an87.md`
+- [x] **13.** `[SAFE]` `f2c5e607` (f2c5e607) — Revert the Neirssi branding change back to Irssi in the README and startup banner → `reviewed/commitf2c5e607.md`
+- [x] **14.** `[SAFE]` `de46fee8` (de46fee8) — Add a GitHub Actions workflow to trigger the website pages build → `reviewed/commitde46fee8.md`
+- [x] **15.** `[SAFE]` `#1394` (5b0f7f78) — Speed up the Termux package CI by no longer building the perl package separately → `reviewed/pr1394.md`
+- [x] **16.** `[SAFE]` `#1405` (555030a2) — Fix a crash when loading a server set up without a chatnet → `reviewed/pr1405.md`
+- [x] **17.** `[SAFE]` `#1403` (58109aee) — Exit gracefully on SIGTERM by emitting "gui exit" and quitting → `reviewed/pr1403.md`
+- [x] **18.** `[SAFE]` `#1430` (8eca391b) — Add list-of-lists support and clearer error messages to the config parser, and fix a time zone as... → `reviewed/pr1430.md`
+- [x] **19.** `[SAFE]` `#1440` (fe8f2a5d) — Build the Termux package from a git source URL → `reviewed/pr1440.md`
+- [x] **20.** `[SAFE]` `#1441` (3fb147ec) — Update GitHub Actions workflows for deprecated set-output and artifact actions → `reviewed/pr1441.md`
+- [x] **21.** `[SAFE]` `#1445` (72df6652) — Prefer IPv6 by default when resolving → `reviewed/pr1445.md`
+- [x] **22.** `[SAFE]` `#1450` (d627e560) — Fix a crash on connect during startup when no chat protocol is available → `reviewed/pr1450.md`
+- [x] **23.** `[SAFE]` `#1463` (a8a24605) — Update the GitHub Actions workflows to a newer Ubuntu runner image → `reviewed/pr1463.md`
+- [x] **24.** `[MINOR]` `#1457` (83ebc0a0) — Properly format listmodes and their timestamps, add human-readable relative times, and support ir... → `reviewed/pr1457.md`
+- [x] **25.** `[SAFE]` `#1486` (07b971cf) — Add a command_history_editable setting to enable bash-like editing of command history entries → `reviewed/pr1486.md`
+- [x] **26.** `[SAFE]` `#1491` (58ca3af3) — Fix a crash when adding a server → `reviewed/pr1491.md`
+- [x] **27.** `[SAFE]` `#1502` (363fbf04) — Add SET window_default_ to the "See also" section of the window help → `reviewed/pr1502.md`
+- [x] **28.** `[SAFE]` `#1505` (89adcc4e) — Improve the bind help text to better explain upper- and lowercase key usage → `reviewed/pr1505.md`
+- [x] **29.** `[SAFE]` `#1509` (2f16b554) — Document pkg-config as a build dependency required by meson to find glib → `reviewed/pr1509.md`
+- [x] **30.** `[SAFE]` `#1510` (504fd7bc) — Restore the locale if Perl breaks it → `reviewed/pr1510.md`
+- [x] **31.** `[SAFE]` `#1511` (b3f6ed0b) — Fix typos in the scrollback help text → `reviewed/pr1511.md`
+- [x] **32.** `[SAFE]` `#1515` (aebc0667) — Add a missing include to fix the fuzz build under clang-18 → `reviewed/pr1515.md`
+- [x] **33.** `[SAFE]` `#1512` (91dac0e5) — Fix missing shell quotes in the irssi-version.sh helper script → `reviewed/pr1512.md`
+- [x] **34.** `[MINOR]` `#1500` (b18832bf) — Add support for the SCRAM-SHA-1, SCRAM-SHA-256 and SCRAM-SHA-512 SASL mechanisms → `reviewed/pr1500.md`
+- [x] **35.** `[SAFE]` `#1520` (d30653f7) — Update the minimum required Perl version in the README → `reviewed/pr1520.md`
+- [x] **36.** `[SAFE]` `#1521` (bb4ed2b1) — Update GitHub Actions to newer Node.js versions → `reviewed/pr1521.md`
+- [x] **37.** `[MINOR]` `#1518` (7b56ffdc) — Fix a glib deprecation in module loading, which may allow loading Apple dylibs with new enough glib → `reviewed/pr1518.md`
+- [x] **38.** `[MINOR]` `#1519` (89f3e1ac) — Replace a deprecated OpenSSL 3 function → `reviewed/pr1519.md`
+- [x] **39.** `[SAFE]` `#1522` (c906b769) — Ensure all text files end with a newline → `reviewed/pr1522.md`
+- [x] **40.** `[SAFE]` `#1523` (4b48cdce) — Fix irssi switching to a Unix socket when the network name contains a slash → `reviewed/pr1523.md`
+- [x] **41.** `[MINOR]` `#1525` (5c159375) — Fix the /BAN command, which was broken by an earlier change → `reviewed/pr1525.md`
+- [x] **42.** `[SAFE]` `#1527` (0697e3ea) — Document the capsicum settings section in the capsicum docs → `reviewed/pr1527.md`
+- [x] **43.** `[SAFE]` `#1545` (344dd0fb) — Bump actions/upload-artifact from the deprecated v1 to v4 in CI → `reviewed/pr1545.md`
+- [x] **44.** `[NEEDS_ATTENTION]` `#1546` (ee4471a1) — Fix the GitHub workflows by pinning setuptools and meson and adding the glib dependency → `reviewed/pr1546.md`
+- [x] **45.** `[SAFE]` `#1552` (85bb6ef0) — Fix uninitialised memory in the CTCP ping reply → `reviewed/pr1552.md`
+- [x] **46.** `[SAFE]` `#1556` (23ec63ae) — Fix SASL negotiation failing when multiple CAP ACK lines are received → `reviewed/pr1556.md`
+- [x] **47.** `[SAFE]` `#1543` (fca3e83e) — Add ipaddr and chosen_family fields to the Perl connection record → `reviewed/pr1543.md`
+- [x] **48.** `[SAFE]` `#1557` (5a9a9aba) — Fix building on Solaris by namespacing TERM_REC functions that conflict with curses.h, and add a ... → `reviewed/pr1557.md`
+- [x] **49.** `[SAFE]` `#1540` (efd8f9b3) — Include <sys/select.h> to get select(3), fixing the build on strict POSIX libcs → `reviewed/pr1540.md`
+- [x] **50.** `[SAFE]` `#1541` (a1c8edfa) — Replace obsolescent inet_addr/inet_aton with inet_pton → `reviewed/pr1541.md`
+- [x] **51.** `[SAFE]` `#1542` (a5441f62) — Use EAI_NONAME instead of HOST_NOT_FOUND for getaddrinfo(3) errors → `reviewed/pr1542.md`
+- [x] **52.** `[SAFE]` `#1558` (44494551) — Remove const qualifiers in fe-text terminfo for better Darwin support → `reviewed/pr1558.md`
+- [x] **53.** `[SAFE]` `#1561` (39d15558) — Update GitHub Actions to Ubuntu 22.04 → `reviewed/pr1561.md`
+- [x] **54.** `[SAFE]` `#1559` (b14bc4a2) — Make bitfields unsigned to silence compiler warnings → `reviewed/pr1559.md`
+- [x] **55.** `[SAFE]` `#1564` (f857f29e) — Adapt the PEP 440 dev version scheme in make-dist.sh → `reviewed/pr1564.md`
+- [x] **56.** `[SAFE]` `#1563` (824c1aa3) — Add a Void Linux Docker build to GitHub Actions → `reviewed/pr1563.md`
+- [x] **57.** `[SAFE]` `#1565` (4b338242) — Fix the Void Linux GitHub Actions workflow → `reviewed/pr1565.md`
+- [x] **58.** `[SAFE]` `#1560` (4ec9d109) — Fix a build issue by adding a missing wchar.h include in the Perl core → `reviewed/pr1560.md`
+- [x] **59.** `[SAFE]` `#1566` (599448af) — Fix two memory leaks when creating a main window with not enough space → `reviewed/pr1566.md`
+- [x] **60.** `[SAFE]` `#1572` (aa285d45) — Fix a `_GNU_SOURCE` redefined warning caused by Perl ccflags → `reviewed/pr1572.md`
+- [x] **61.** `[SAFE]` `#1576` (216715bc) — Fix the Solaris GitHub Actions test by detecting the third argument type of puts → `reviewed/pr1576.md`
+- [x] **62.** `[SAFE]` `#1575` (995e77c3) — Document the existing -priority option in the HILIGHT syntax help → `reviewed/pr1575.md`
+- [x] **63.** `[SAFE]` `#1579` (cc24b2c5) — Fix the xbps Void Linux GitHub Actions workflow → `reviewed/pr1579.md`
+- [x] **64.** `[SAFE]` `#1577` (e70993c4) — Use g_string_free_and_steal to avoid an unused-result warning on GLib 2.76 → `reviewed/pr1577.md`
+- [x] **65.** `[SAFE]` `#1590` (f4a4bcb4) — Fix a typo in the LUSERS help text → `reviewed/pr1590.md`
+- [x] **66.** `[SAFE]` `#1588` (bab97b4c) — Increase the default scrollback_lines from 500 to 5000 → `reviewed/pr1588.md`
+- [x] **67.** `[SAFE]` `#1591` (89dc74cb) — Fix nickname truncation in netsplit messages to avoid a trailing comma-space → `reviewed/pr1591.md`
+- [x] **68.** `[SAFE]` `#1594` (6c72dc14) — Fix hide_text_style and hide_colors to mitigate color bleed on the reset control code → `reviewed/pr1594.md`
+- [x] **69.** `[SAFE]` `#1597` (ebdf8639) — Update bundled scripts autoop, mail, and scriptassist → `reviewed/pr1597.md`
+- [x] **70.** `[SAFE]` `#1600` (97304bb7) — Update package lists in the abicheck GitHub Actions workflow → `reviewed/pr1600.md`
+- [x] **71.** `[SAFE]` `#1599` (81887a62) — Update syncdocs.sh to sync the New-users and qna docs, dropping faq and startup-HOWTO → `reviewed/pr1599.md`
+- [x] **72.** `[SAFE]` `#1578` (d5be7d77) — Make compilation work on Cygwin by using shared_library instead of shared_module → `reviewed/pr1578.md`
+- [x] **73.** `[NEEDS_ATTENTION]` `#1580` (62031f5b) — Use the GIO resolver for name resolution and rename the resolve_prefer_ipv6 setting to irssiproxy... → `reviewed/pr1580.md`
+- [x] **74.** `[SAFE]` `#1568` (3c656846) — Document additional compile dependencies (utf8proc, libgcrypt, complete Perl) in INSTALL → `reviewed/pr1568.md`
+- [x] **75.** `[SAFE]` `#1604` (3629a122) — Move the Perl DCC glue into a separate Irssi::Irc::Dcc module so Irssi::Irc can be used with dcc ... → `reviewed/pr1604.md`
+- [x] **76.** `[SAFE]` `#1606` (64db7abc) — Fix the clang-format-xs tooling boot code and comment spacing → `reviewed/pr1606.md`
+- [x] **77.** `[SAFE]` `#1605` (00466fe5) — Add compatibility code for older GResolver versions → `reviewed/pr1605.md`
+- [x] **78.** `[SAFE]` `#1607` (80b8875f) — Fix several issues with the GIO resolver → `reviewed/pr1607.md`
+- [x] **79.** `[SAFE]` `#1611` (43f1727e) — Add a muon meson-format GitHub Actions workflow and reformat the meson build files → `reviewed/pr1611.md`

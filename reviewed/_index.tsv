@@ -1,0 +1,79 @@
+01	an38	9f9d49a2	an#38, 9f9d49a2	Document the Perl version() and parse_special() functions and the $abiversion special variable. This was incorrectly listed in the 1.4.1 NEWS but was not actually present until now
+02	an42	d9b181e4	an#42, d9b181e4	Autoload the IRC protocol module and load its config when the chat protocol is created
+03	an64	58efc637	an#64, 58efc637	Remove the autotools build system in favour of meson
+04	an69	3a5f93bb	an#69, 3a5f93bb	Remove the enable-true-color compile-time switch and always enable 24-bit true color
+05	an73	4115e474	an#73, 4115e474	Remove deprecated compile-time build options such as PERL_STATIC_LIBS, HAVE_SOCKS and USE_GREGEX
+06	an74	4bf12908	an#74, 4bf12908	Add some missing files to make-dist
+07	an75	4986a4f9	an#75, 4986a4f9	Simplify the termux GitHub Actions workflow
+08	an80	ed4ec313	an#80, ed4ec313	Abort the meson build (and bump the required meson version) when run in an autotools-configured tree
+09	an79	ae5a9283	an#79, ae5a9283	Fix bound IRC queries not being restored on reconnect
+10	an81	e300fee9	an#81, e300fee9	Add a new PUBNOTICES message level to separate public channel notices from private notices
+11	commit9f71a391	9f71a391	9f71a391	Add an OBS workflow trigger
+12	an87	7285da27	an#87, 7285da27	Fix /names sending a raw server event by binding it first
+13	commitf2c5e607	f2c5e607	f2c5e607	Revert the Neirssi branding change back to Irssi in the README and startup banner
+14	commitde46fee8	de46fee8	de46fee8	Add a GitHub Actions workflow to trigger the website pages build
+15	pr1394	5b0f7f78	#1394	Speed up the Termux package CI by no longer building the perl package separately
+16	pr1405	555030a2	#1405	Fix a crash when loading a server set up without a chatnet
+17	pr1403	58109aee	#1403	Exit gracefully on SIGTERM by emitting "gui exit" and quitting
+18	pr1430	8eca391b	#1430	Add list-of-lists support and clearer error messages to the config parser, and fix a time zone assertion by parsing ISO 8601 times as UTC
+19	pr1440	fe8f2a5d	#1440	Build the Termux package from a git source URL
+20	pr1441	3fb147ec	#1441	Update GitHub Actions workflows for deprecated set-output and artifact actions
+21	pr1445	72df6652	#1445	Prefer IPv6 by default when resolving
+22	pr1450	d627e560	#1450	Fix a crash on connect during startup when no chat protocol is available
+23	pr1463	a8a24605	#1463	Update the GitHub Actions workflows to a newer Ubuntu runner image
+24	pr1457	83ebc0a0	#1457	Properly format listmodes and their timestamps, add human-readable relative times, and support ircd-hybrid quiet lists
+25	pr1486	07b971cf	#1486	Add a command_history_editable setting to enable bash-like editing of command history entries
+26	pr1491	58ca3af3	#1491	Fix a crash when adding a server
+27	pr1502	363fbf04	#1502	Add SET window_default_ to the "See also" section of the window help
+28	pr1505	89adcc4e	#1505	Improve the bind help text to better explain upper- and lowercase key usage
+29	pr1509	2f16b554	#1509	Document pkg-config as a build dependency required by meson to find glib
+30	pr1510	504fd7bc	#1510	Restore the locale if Perl breaks it
+31	pr1511	b3f6ed0b	#1511	Fix typos in the scrollback help text
+32	pr1515	aebc0667	#1515	Add a missing include to fix the fuzz build under clang-18
+33	pr1512	91dac0e5	#1512	Fix missing shell quotes in the irssi-version.sh helper script
+34	pr1500	b18832bf	#1500	Add support for the SCRAM-SHA-1, SCRAM-SHA-256 and SCRAM-SHA-512 SASL mechanisms
+35	pr1520	d30653f7	#1520	Update the minimum required Perl version in the README
+36	pr1521	bb4ed2b1	#1521	Update GitHub Actions to newer Node.js versions
+37	pr1518	7b56ffdc	#1518	Fix a glib deprecation in module loading, which may allow loading Apple dylibs with new enough glib
+38	pr1519	89f3e1ac	#1519	Replace a deprecated OpenSSL 3 function
+39	pr1522	c906b769	#1522	Ensure all text files end with a newline
+40	pr1523	4b48cdce	#1523	Fix irssi switching to a Unix socket when the network name contains a slash
+41	pr1525	5c159375	#1525	Fix the /BAN command, which was broken by an earlier change
+42	pr1527	0697e3ea	#1527	Document the capsicum settings section in the capsicum docs
+43	pr1545	344dd0fb	#1545	Bump actions/upload-artifact from the deprecated v1 to v4 in CI
+44	pr1546	ee4471a1	#1546	Fix the GitHub workflows by pinning setuptools and meson and adding the glib dependency
+45	pr1552	85bb6ef0	#1552	Fix uninitialised memory in the CTCP ping reply
+46	pr1556	23ec63ae	#1556	Fix SASL negotiation failing when multiple CAP ACK lines are received
+47	pr1543	fca3e83e	#1543	Add ipaddr and chosen_family fields to the Perl connection record
+48	pr1557	5a9a9aba	#1557	Fix building on Solaris by namespacing TERM_REC functions that conflict with curses.h, and add a Solaris CI build
+49	pr1540	efd8f9b3	#1540	Include <sys/select.h> to get select(3), fixing the build on strict POSIX libcs
+50	pr1541	a1c8edfa	#1541	Replace obsolescent inet_addr/inet_aton with inet_pton
+51	pr1542	a5441f62	#1542	Use EAI_NONAME instead of HOST_NOT_FOUND for getaddrinfo(3) errors
+52	pr1558	44494551	#1558	Remove const qualifiers in fe-text terminfo for better Darwin support
+53	pr1561	39d15558	#1561	Update GitHub Actions to Ubuntu 22.04
+54	pr1559	b14bc4a2	#1559	Make bitfields unsigned to silence compiler warnings
+55	pr1564	f857f29e	#1564	Adapt the PEP 440 dev version scheme in make-dist.sh
+56	pr1563	824c1aa3	#1563	Add a Void Linux Docker build to GitHub Actions
+57	pr1565	4b338242	#1565	Fix the Void Linux GitHub Actions workflow
+58	pr1560	4ec9d109	#1560	Fix a build issue by adding a missing wchar.h include in the Perl core
+59	pr1566	599448af	#1566	Fix two memory leaks when creating a main window with not enough space
+60	pr1572	aa285d45	#1572	Fix a _GNU_SOURCE redefined warning caused by Perl ccflags
+61	pr1576	216715bc	#1576	Fix the Solaris GitHub Actions test by detecting the third argument type of puts
+62	pr1575	995e77c3	#1575	Document the existing -priority option in the HILIGHT syntax help
+63	pr1579	cc24b2c5	#1579	Fix the xbps Void Linux GitHub Actions workflow
+64	pr1577	e70993c4	#1577	Use g_string_free_and_steal to avoid an unused-result warning on GLib 2.76
+65	pr1590	f4a4bcb4	#1590	Fix a typo in the LUSERS help text
+66	pr1588	bab97b4c	#1588	Increase the default scrollback_lines from 500 to 5000
+67	pr1591	89dc74cb	#1591	Fix nickname truncation in netsplit messages to avoid a trailing comma-space
+68	pr1594	6c72dc14	#1594	Fix hide_text_style and hide_colors to mitigate color bleed on the reset control code
+69	pr1597	ebdf8639	#1597	Update bundled scripts autoop, mail, and scriptassist
+70	pr1600	97304bb7	#1600	Update package lists in the abicheck GitHub Actions workflow
+71	pr1599	81887a62	#1599	Update syncdocs.sh to sync the New-users and qna docs, dropping faq and startup-HOWTO
+72	pr1578	d5be7d77	#1578	Make compilation work on Cygwin by using shared_library instead of shared_module
+73	pr1580	62031f5b	#1580	Use the GIO resolver for name resolution and rename the resolve_prefer_ipv6 setting to irssiproxy_prefer_ipv6
+74	pr1568	3c656846	#1568	Document additional compile dependencies (utf8proc, libgcrypt, complete Perl) in INSTALL
+75	pr1604	3629a122	#1604	Move the Perl DCC glue into a separate Irssi::Irc::Dcc module so Irssi::Irc can be used with dcc unloaded
+76	pr1606	64db7abc	#1606	Fix the clang-format-xs tooling boot code and comment spacing
+77	pr1605	00466fe5	#1605	Add compatibility code for older GResolver versions
+78	pr1607	80b8875f	#1607	Fix several issues with the GIO resolver
+79	pr1611	43f1727e	#1611	Add a muon meson-format GitHub Actions workflow and reformat the meson build files
